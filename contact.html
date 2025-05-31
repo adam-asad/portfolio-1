@@ -1,22 +1,68 @@
-<html>
-    <head>
-    <title>
-        portfolio using html and css
-    </title>
-   <link href=" @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap')"></link>;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Adam Asad</title>
+    <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
 </head>
 <body>
+    <header class="header">
+        <a href="index.html" class="logo">Adam.</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
 
-    <!-- <a href="https://www.linkedin.com/in/adam-asad-537bb9301/" target="_blank" rel="noopener noreferrer">LinkedIn</a> -->
+    <section class="contact-section">
+        <div class="contact-content">
+            <h1>Send Me a <span>Message</span></h1>
+            <h3>I'll respond within 24 hours</h3>
 
-    
-<div  style="color: black; font-size: xx-large; text-align: center;">
-    <a href="https://www.linkedin.com/in/adam-asad-537bb9301/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <!-- Improved Form -->
+            <form class="contact-form" action="https://formspree.io/f/xqabzwlp" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder=" " required>
+                    <label>Full Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder=" " required>
+                    <label>Email</label>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder=" " required></textarea>
+                    <label>Your Message</label>
+                </div>
+                <input type="hidden" name="_redirect" value="thankyou.html">
+                <button type="submit" class="submit-btn">
+                    <span>Send</span>
+                    <i class='bx bx-send'></i>
+                </button>
+            </form>
+        </div>
 
-    <br>
-    <a href="https://www.instagram.com/adam_asad.png/"><i class='bx bxl-instagram-alt' ></i></a>
-    
-</div>
+        <!-- Contact Info - Now at Bottom -->
+        <div class="contact-footer">
+            <div class="info-card">
+                <i class='bx bx-envelope'></i>
+                <h4>Email</h4>
+                <p>adam.asad@example.com</p>
+            </div>
+            <div class="info-card">
+                <i class='bx bx-phone'></i>
+                <h4>Phone</h4>
+                <p>+92 300 1234567</p>
+            </div>
+            <div class="info-card">
+                <i class='bx bx-map'></i>
+                <h4>Location</h4>
+                <p>Mardan, Pakistan</p>
+            </div>
+        </div>
+    </section>
 </body>
+</html>
