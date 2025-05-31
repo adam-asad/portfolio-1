@@ -1,40 +1,39 @@
-
+/* === Global Styles === */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-
-
-body{
-    font-family: 'roboto',sans-serif;
- background-color:rgb(127, 217, 255);
- color: #ededed
+    font-family: 'Roboto', sans-serif;
 }
 
-.header{
+body {
+    background-color: rgb(0, 83, 139);
+    color: #ededed;
+}
+
+/* === Header/Nav === */
+.header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background-color:rgb(0, 83, 139);
+    background-color: rgb(0, 83, 139);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
 
-.logo{
-    font-size: 20px;
+.logo {
+    font-size: 25px;
     color: whitesmoke;
-    text-decoration:none;
+    text-decoration: none;
     font-weight: 700;
-    font-style: italic;
 }
 
-.navbar a{
-    font-size: 20px;
+.navbar a {
+    font-size: 18px;
     color: whitesmoke;
     text-decoration: none;
     font-weight: 600;
@@ -43,92 +42,139 @@ body{
 }
 
 .navbar a:hover,
-.navbar a.active{
+.navbar a.active {
     color: aqua;
 }
 
-.home{
+/* === Home Section === */
+.home {
     height: 100vh;
     display: flex;
     align-items: center;
     padding: 0 10%;
-
 }
 
-.home-content h1{
-    font-size:  56px;
+.home-content h1 {
+    font-size: 56px;
     font-weight: 700;
-    line-height: 1.2;
 }
-.home-content h2{
-    font-size:26px ;
+
+.home-content h2 {
+    font-size: 26px;
     font-weight: 700;
-    color:rgb(43, 101, 226);
+    color: rgb(43, 226, 131);
 }
-.home-content p{
+
+.home-content p {
     font-size: 16px;
     margin: 20px 0 40px;
 }
-.home-content .btn-box{
+
+/* === About Section === */
+.about-section {
+    padding: 100px 10% 0;
+    min-height: 100vh;
+}
+
+.about-content h1 {
+    font-size: 56px;
+}
+
+.about-content h1 span {
+    color: rgb(0, 229, 255);
+}
+
+.about-content h3 {
+    font-size: 26px;
+    color: rgb(43, 226, 131);
+    margin: 15px 0;
+}
+
+.skills {
     display: flex;
-    justify-content: space-between;
-    width: 345px;
-    height: 50px;
-
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
 }
- .btn-box a{
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 100%;
-    background: rgb(43, 226, 131);
-    border: 3px solid rgb(0, 208, 255);
-    border-radius: 8px;
-    font-size: 19px;
-    color:rgb(245, 245, 245);
+
+.skill {
+    background: rgba(0, 229, 255, 0.2);
+    border: 1px solid rgb(0, 208, 255);
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: #ededed;
     text-decoration: none;
-    font-weight: 700;
-    letter-spacing: 1px;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-
+    transition: all 0.3s;
 }
 
-.btn-box a:nth-child(2){
+.skill:hover {
+    background: rgb(0, 229, 255);
+    color: rgb(0, 83, 139);
+}
+
+/* === Projects Section === */
+.projects-section {
+    padding: 100px 10% 0;
+    min-height: 100vh;
+}
+
+.projects-content h1 {
+    font-size: 56px;
+}
+
+.projects-content h1 span {
+    color: rgb(0, 229, 255);
+}
+
+.project-category {
+    margin: 40px 0;
+}
+
+.project-category h2 {
+    color: rgb(43, 226, 131);
+    margin-bottom: 20px;
+}
+
+.project-card {
+    background: rgba(0, 229, 255, 0.1);
+    border: 1px solid rgb(0, 208, 255);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+}
+
+.project-card h3 {
+    color: rgb(0, 229, 255);
+}
+
+/* === Buttons === */
+.btn-box {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-box a {
+    padding: 12px 25px;
+    background: rgb(43, 226, 131);
+    border: 2px solid rgb(0, 208, 255);
+    border-radius: 8px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn-box a:nth-child(2) {
     background: transparent;
-
-}
-.btn-box a:nth-child(2):hover{
-    color: aliceblue;
-}
-.btn-box a:nth-child(2)::before{
-    background: rgb(0, 234, 255);
-}
-.btn-box a:nth-child(1){
-    background: rgb(51, 109, 153);
 }
 
-.btn-box a::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color:rgb(0, 229, 255);
-    z-index: -1;
-    transition: .5s;
-
+.btn-box a:hover {
+    background: rgb(0, 229, 255);
+    color: rgb(0, 83, 139);
 }
 
-.btn-box a:hover::before{
-    width: 100%;
-}
-
-.home-sci{
+/* === Social Icons === */
+.home-sci {
     position: absolute;
     bottom: 40px;
     width: 170px;
@@ -136,8 +182,7 @@ body{
     justify-content: space-between;
 }
 
-.home-sci a{
-    position: relative;
+.home-sci a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -149,27 +194,115 @@ body{
     font-size: 20px;
     color: rgb(0, 157, 255);
     text-decoration: none;
-    z-index: 1;
-    overflow: hidden;
     transition: .5s;
 }
 
-.home-sci a:hover{
+.home-sci a:hover {
+    background: rgb(0, 247, 255);
     color: #ededed;
 }
 
-.home-sci a::before{
-    content: '';
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: rgb(0, 247, 255);
-    z-index: -1;
-    transition: .5s;
+/* ===== MODERN CONTACT FORM ===== */
+.contact-section {
+    padding: 100px 10% 50px;
+    min-height: 100vh;
+    background: rgb(0, 83, 139);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.home-sci a:hover:before{
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
     width: 100%;
+}
+
+.contact-form {
+    margin-top: 40px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    background: transparent;
+    border: 1px solid rgb(0, 208, 255);
+    border-radius: 8px;
+    color: #ededed;
+    font-size: 16px;
+}
+
+.form-group label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #aaa;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.form-group input:focus ~ label,
+.form-group input:valid ~ label,
+.form-group textarea:focus ~ label,
+.form-group textarea:valid ~ label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    background: rgb(0, 83, 139);
+    padding: 0 5px;
+    color: rgb(0, 229, 255);
+}
+
+.submit-btn {
+    background: rgb(43, 226, 131);
+    border: 2px solid rgb(0, 208, 255);
+    padding: 12px 30px;
+    border-radius: 8px;
+    color: #ededed;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: rgb(0, 229, 255);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 229, 255, 0.3);
+}
+
+/* ===== CONTACT FOOTER ===== */
+.contact-footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 0;
+    margin-top: 50px;
+    border-top: 1px solid rgba(0, 208, 255, 0.3);
+}
+
+.info-card {
+    text-align: center;
+    min-width: 200px;
+}
+
+.info-card i {
+    font-size: 36px;
+    color: rgb(0, 229, 255);
+    margin-bottom: 15px;
+}
+
+.info-card h4 {
+    color: rgb(43, 226, 131);
+    margin-bottom: 8px;
+    font-size: 18px;
 }
